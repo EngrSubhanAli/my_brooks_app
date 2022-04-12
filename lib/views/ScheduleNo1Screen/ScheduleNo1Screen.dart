@@ -186,11 +186,13 @@ class CustomTextFieldWidget extends StatelessWidget {
           Container(
             width: width == null ? 304.w : width,
             height: height == null ? 38.h : height,
+            padding: EdgeInsets.symmetric(vertical: 5.h),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.r),
               color: greyColor.withOpacity(0.1),
             ),
             child: TextField(
+              maxLines: 4,
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.symmetric(horizontal: 20.w),
                 hintText: hint,

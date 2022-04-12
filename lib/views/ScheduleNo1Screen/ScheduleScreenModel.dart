@@ -1,7 +1,5 @@
-import 'package:intl/intl.dart';
-
-String celebrityScheduleDate =
-    DateFormat('EEE, MMM d, ' 'yyyy').format(DateTime.now());
+String celebrityScheduleDate = 'DD/MM/YYYY';
+// DateFormat('EEE, MMM d, ' 'yyyy').format(DateTime.now());
 
 class CelebritySchedule {
   String date;

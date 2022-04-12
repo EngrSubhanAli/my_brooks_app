@@ -8,10 +8,9 @@ import 'package:intl/intl.dart';
 
 class AgreementDateWidget extends StatefulWidget {
   final String title;
+  final double? width;
 
-  AgreementDateWidget({
-    required this.title,
-  });
+  AgreementDateWidget({required this.title, this.width});
 
   @override
   State<AgreementDateWidget> createState() => _AgreementDateWidgetState();
@@ -52,7 +51,7 @@ class _AgreementDateWidgetState extends State<AgreementDateWidget> {
               }, currentTime: DateTime.now(), locale: LocaleType.en);
             },
             child: Container(
-              width: 304.w,
+              width: widget.width == null ? 304.w : widget.width,
               height: 38.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.r),
@@ -60,7 +59,7 @@ class _AgreementDateWidgetState extends State<AgreementDateWidget> {
               ),
               child: Row(
                 children: [
-                  SizedBox(width: 30.w),
+                  SizedBox(width: 10.w),
                   Text(celebrityScheduleDate),
                   Spacer(),
                   Icon(
