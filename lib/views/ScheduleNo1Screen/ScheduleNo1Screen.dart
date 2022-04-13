@@ -26,6 +26,7 @@ class _ScheduleNo1ScreenState extends State<ScheduleNo1Screen> {
                 SizedBox(height: 20.h),
                 AgreementDateWidget(
                   title: 'Agreement',
+                  titleColor: redColor,
                 ),
                 SizedBox(height: 10.h),
                 Text(
@@ -162,10 +163,12 @@ class CustomTextFieldWidget extends StatelessWidget {
   final String hint;
   final double? width;
   final double? height;
+  final double? titleFontSize;
 
   CustomTextFieldWidget({
     required this.hint,
     required this.title,
+    this.titleFontSize,
     this.height,
     this.width,
   });
@@ -179,7 +182,7 @@ class CustomTextFieldWidget extends StatelessWidget {
           Text(
             title,
             style: GoogleFonts.roboto(
-              fontSize: 12.sp,
+              fontSize: titleFontSize == null ? 12.sp : titleFontSize,
               color: blackColor,
             ),
           ),

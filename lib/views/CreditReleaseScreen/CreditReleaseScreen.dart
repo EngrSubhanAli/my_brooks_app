@@ -67,7 +67,10 @@ class CreditReleaseScreen extends StatelessWidget {
                   hint: 'Applicant Name',
                 ),
                 SizedBox(height: 10.h),
-                AgreementDateWidget(title: 'Date'),
+                AgreementDateWidget(
+                  title: 'Date',
+                  titleColor: blackColor,
+                ),
                 SizedBox(height: 20.h),
                 CustomSubmitButton(title: 'SUBMIT'),
                 SizedBox(height: 100.h),

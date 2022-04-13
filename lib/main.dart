@@ -1,8 +1,7 @@
-import 'package:brooks/views/FinancialStatement/7_FinancialStatementScreen.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'views/FinancialStatement/1_FinancialStatementScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
       builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Brooks',
-        home: FinancialStatementScreen_7(),
+        home: FinancialStatementScreen_1(),
         // initialRoute: '/',
         // onGenerateRoute: RouteGenerator.generateRoute,
       ),

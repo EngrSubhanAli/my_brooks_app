@@ -73,6 +73,7 @@ class RepresentationsAndWarrantiesScreen extends StatelessWidget {
                     AgreementDateWidget(
                       title: 'Date',
                       width: 130.w,
+                      titleColor: blackColor,
                     ),
                   ],
                 ),
@@ -101,6 +102,7 @@ class RepresentationsAndWarrantiesScreen extends StatelessWidget {
                     AgreementDateWidget(
                       title: 'Date',
                       width: 130.w,
+                      titleColor: blackColor,
                     ),
                   ],
                 ),

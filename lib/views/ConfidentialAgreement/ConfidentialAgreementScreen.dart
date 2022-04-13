@@ -1,3 +1,4 @@
+import 'package:brooks/constants/Colors.dart';
 import 'package:brooks/views/ScheduleNo1Screen/ScheduleNo1Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,9 +27,7 @@ class ConfidentialAgreementScreen extends StatelessWidget {
                 Text(
                     'IN WITNESS WHEREOF, the parties hereto acknowledge, understand and agree to this Confidentiality Agreement.  The Parties understand and intend to be bound by all of the clauses contained in this document and further certify that they have received signed copies of this agreement.'),
                 SizedBox(height: 20.h),
-                AgreementDateWidget(
-                  title: 'Agreement',
-                ),
+                AgreementDateWidget(title: 'Agreement', titleColor: redColor),
                 SizedBox(height: 10.h),
                 CustomTextFieldWidget(
                   title: 'Customer Name',

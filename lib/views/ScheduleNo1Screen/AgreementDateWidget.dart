@@ -9,8 +9,9 @@ import 'package:intl/intl.dart';
 class AgreementDateWidget extends StatefulWidget {
   final String title;
   final double? width;
+  final Color? titleColor;
 
-  AgreementDateWidget({required this.title, this.width});
+  AgreementDateWidget({required this.title, this.width, this.titleColor});
 
   @override
   State<AgreementDateWidget> createState() => _AgreementDateWidgetState();
@@ -25,7 +26,9 @@ class _AgreementDateWidgetState extends State<AgreementDateWidget> {
         children: [
           Text(
             widget.title,
-            style: GoogleFonts.roboto(color: redColor),
+            style: GoogleFonts.roboto(
+                color:
+                    widget.titleColor == null ? redColor : widget.titleColor),
           ),
           GestureDetector(
             onTap: () {
