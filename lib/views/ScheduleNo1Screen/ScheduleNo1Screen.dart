@@ -331,8 +331,10 @@ class ScheduleNo1ScreenText extends StatelessWidget {
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
+  final double? titleFontSize;
   CustomAppBar({
     required this.title,
+    this.titleFontSize,
   });
 
   @override
@@ -369,7 +371,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           Text(
             title,
             style: GoogleFonts.roboto(
-              fontSize: 16.sp,
+              fontSize: titleFontSize == null ? 16.sp : titleFontSize,
               color: blueColor,
             ),
           ),
