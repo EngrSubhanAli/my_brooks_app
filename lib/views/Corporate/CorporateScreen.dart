@@ -1,3 +1,4 @@
+import 'package:brooks/views/CommercialRealEstateChecklist/CommercialRealEstateChecklistScreen.dart';
 import 'package:brooks/views/ScheduleNo1Screen/ScheduleNo1Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -94,7 +95,10 @@ class CorporateScreen extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 30.h),
-                CustomSubmitButton(title: 'CONTINUE'),
+                CustomSubmitButton(
+                  title: 'CONTINUE',
+                  routeTo: CommercialRealEstateChecklistScreen(),
+                ),
                 SizedBox(height: 100.h),
               ],
             ),

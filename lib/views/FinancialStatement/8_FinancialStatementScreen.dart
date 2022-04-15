@@ -1,4 +1,5 @@
 import 'package:brooks/constants/Colors.dart';
+import 'package:brooks/views/RepresentationsandWarranties/RepresentationsAndWarrantiesScreen.dart';
 import 'package:brooks/views/ScheduleNo1Screen/ScheduleNo1Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -10,7 +11,8 @@ class FinancialStatementScreen_8 extends StatefulWidget {
       _FinancialStatementScreen_8State();
 }
 
-class _FinancialStatementScreen_8State extends State<FinancialStatementScreen_8> {
+class _FinancialStatementScreen_8State
+    extends State<FinancialStatementScreen_8> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -71,7 +73,10 @@ class _FinancialStatementScreen_8State extends State<FinancialStatementScreen_8>
                   height: 70.h,
                 ),
                 SizedBox(height: 20.h),
-                CustomSubmitButton(title: 'CONTINUE'),
+                CustomSubmitButton(
+                  title: 'CONTINUE',
+                  routeTo: RepresentationsAndWarrantiesScreen(),
+                ),
                 SizedBox(height: 100.h),
               ],
             ),

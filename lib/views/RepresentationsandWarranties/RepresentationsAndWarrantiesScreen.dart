@@ -1,4 +1,5 @@
 import 'package:brooks/constants/Colors.dart';
+import 'package:brooks/views/CommercialRealEstate/CommercialRealEstateScreen.dart';
 import 'package:brooks/views/ScheduleNo1Screen/AgreementDateWidget.dart';
 import 'package:brooks/views/ScheduleNo1Screen/ScheduleNo1Screen.dart';
 import 'package:flutter/material.dart';
@@ -107,7 +108,10 @@ class RepresentationsAndWarrantiesScreen extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 20.h),
-                CustomSubmitButton(title: 'SUBMIT'),
+                CustomSubmitButton(
+                  title: 'SUBMIT',
+                  routeTo: CommercialRealEstateScreen(),
+                ),
                 SizedBox(height: 100.h),
               ],
             ),

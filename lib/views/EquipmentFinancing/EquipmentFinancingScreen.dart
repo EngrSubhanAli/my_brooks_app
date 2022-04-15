@@ -95,7 +95,10 @@ class EquipmentFinancingScreen extends StatelessWidget {
                   titleFontSize: 12.sp,
                 ),
                 SizedBox(height: 20.h),
-                CustomSubmitButton(title: 'SUBMIT'),
+                CustomSubmitButton(
+                  title: 'SUBMIT',
+                  routeTo: HardMoneyFinancingScreen(),
+                ),
                 SizedBox(height: 100.h),
               ],
             ),

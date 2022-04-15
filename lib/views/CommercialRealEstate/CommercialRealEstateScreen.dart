@@ -1,3 +1,4 @@
+import 'package:brooks/views/EquipmentFinancing/EquipmentFinancingScreen.dart';
 import 'package:brooks/views/ScheduleNo1Screen/ScheduleNo1Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -35,7 +36,10 @@ class CommercialRealEstateScreen extends StatelessWidget {
                 SizedBox(height: 10.h),
                 UploadDocumentWidget(title: 'Appraisal Report'),
                 SizedBox(height: 20.h),
-                CustomSubmitButton(title: 'SUBMIT'),
+                CustomSubmitButton(
+                  title: 'SUBMIT',
+                  routeTo: EquipmentFinancingScreen(),
+                ),
                 SizedBox(height: 100.h),
               ],
             ),

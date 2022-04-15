@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../ScheduleNo1Screen/AgreementDateWidget.dart';
+import '2_FinancialStatementScreen.dart';
 
 class FinancialStatementScreen_1 extends StatelessWidget {
   @override
@@ -117,7 +118,10 @@ class FinancialStatementScreen_1 extends StatelessWidget {
                   titleFontSize: 10.sp,
                 ),
                 SizedBox(height: 20.h),
-                CustomSubmitButton(title: 'CONTINUE'),
+                CustomSubmitButton(
+                  title: 'CONTINUE',
+                  routeTo: FinancialStatementScreen_2(),
+                ),
                 SizedBox(height: 100.h),
               ],
             ),

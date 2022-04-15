@@ -1,3 +1,4 @@
+import 'package:brooks/views/FinancialStatement/1_FinancialStatementScreen.dart';
 import 'package:brooks/views/ScheduleNo1Screen/ScheduleNo1Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,7 +8,10 @@ class CommercialRealEstateChecklistScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppBar(title: 'Commercial Real Estate Checklist'),
+        appBar: CustomAppBar(
+          title: 'Commercial Real Estate Checklist',
+          titleFontSize: 14.sp,
+        ),
         body: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.w),
@@ -36,7 +40,10 @@ class CommercialRealEstateChecklistScreen extends StatelessWidget {
                 SizedBox(height: 20.h),
                 Align(
                   alignment: Alignment.center,
-                  child: CustomSubmitButton(title: 'GET STARTED'),
+                  child: CustomSubmitButton(
+                    title: 'GET STARTED',
+                    routeTo: FinancialStatementScreen_1(),
+                  ),
                 ),
                 SizedBox(height: 100.h),
               ],

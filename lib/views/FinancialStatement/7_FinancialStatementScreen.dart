@@ -1,3 +1,4 @@
+import 'package:brooks/views/FinancialStatement/8_FinancialStatementScreen.dart';
 import 'package:brooks/views/ScheduleNo1Screen/ScheduleNo1Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -117,7 +118,10 @@ class FinancialStatementScreen_7 extends StatelessWidget {
                   title: 'Other Assets',
                 ),
                 SizedBox(height: 20.h),
-                CustomSubmitButton(title: 'CONTINUE'),
+                CustomSubmitButton(
+                  title: 'CONTINUE',
+                  routeTo: FinancialStatementScreen_8(),
+                ),
                 SizedBox(height: 100.h),
               ],
             ),
@@ -142,7 +146,7 @@ class FinancialStatementBalanceSheetAmoutWidget extends StatelessWidget {
     return Row(
       children: [
         Container(
-          width: 210.w,
+          width: 180.w,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

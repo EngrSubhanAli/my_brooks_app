@@ -117,7 +117,10 @@ class FinancialStatementScreen_6 extends StatelessWidget {
                   title: 'Other Assets',
                 ),
                 SizedBox(height: 20.h),
-                CustomSubmitButton(title: 'CONTINUE'),
+                CustomSubmitButton(
+                  title: 'CONTINUE',
+                  routeTo: FinancialStatementScreen_7(),
+                ),
                 SizedBox(height: 100.h),
               ],
             ),

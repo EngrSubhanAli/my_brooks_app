@@ -1,3 +1,4 @@
+import 'package:brooks/views/ConfidentialAgreement/ConfidentialAgreementScreen.dart';
 import 'package:brooks/views/ScheduleNo1Screen/ScheduleNo1Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -44,7 +45,10 @@ class TermsofAgreementScreen extends StatelessWidget {
                   height: 120.h,
                 ),
                 SizedBox(height: 20.h),
-                CustomSubmitButton(title: 'Submit'),
+                CustomSubmitButton(
+                  title: 'Submit',
+                  routeTo: ConfidentialAgreementScreen(),
+                ),
                 SizedBox(height: 70.h),
               ],
             ),

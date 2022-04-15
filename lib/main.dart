@@ -1,14 +1,33 @@
+import 'dart:async';
+import 'package:brooks/views/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'views/AccountsRecievableInformation/AccountsRecievableInformationScreen.dart';
+import 'package:get/get.dart';
+import 'views/AuthScreens/SignInScreen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+      Duration(seconds: 2),
+      () => Get.offAll(
+        () => SignInScreen(),
+        transition: Transition.fadeIn,
+        duration: Duration(milliseconds: 500),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +36,11 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
     return ScreenUtilInit(
-      builder: () => MaterialApp(
+      designSize: Size(305, 706),
+      builder: () => GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Brooks',
-        home: AccountsRecievableInformationScreen(),
-        // initialRoute: '/',
-        // onGenerateRoute: RouteGenerator.generateRoute,
+        home: SplashScreen(),
       ),
-      designSize: const Size(325, 706),
     );
   }
 }

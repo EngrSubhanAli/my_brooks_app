@@ -11,6 +11,7 @@ class NonExclusiveScreen extends StatelessWidget {
       child: Scaffold(
         appBar: CustomAppBar(
           title: 'NON-EXCLUSIVE FEE AGREEMENT',
+          titleFontSize: 13.sp,
         ),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.w),
@@ -97,7 +98,10 @@ class NonExclusiveScreen extends StatelessWidget {
                   hint: 'Customer State',
                 ),
                 SizedBox(height: 20.h),
-                CustomSubmitButton(title: 'Submit'),
+                CustomSubmitButton(
+                  title: 'Submit',
+                  routeTo: ScheduleNo1Screen(),
+                ),
                 SizedBox(height: 50.h),
               ],
             ),

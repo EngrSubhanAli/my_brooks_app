@@ -2,6 +2,7 @@ import 'package:brooks/constants/Colors.dart';
 import 'package:brooks/views/ScheduleNo1Screen/AgreementDateWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ScheduleNo1Screen extends StatefulWidget {
@@ -106,7 +107,9 @@ class _ScheduleNo1ScreenState extends State<ScheduleNo1Screen> {
                   hint: 'Customer State',
                 ),
                 SizedBox(height: 20.h),
-                CustomSubmitButton(title: 'Submit'),
+                CustomSubmitButton(
+                  title: 'Submit',
+                ),
                 SizedBox(height: 50.h),
               ],
             ),
@@ -119,40 +122,52 @@ class _ScheduleNo1ScreenState extends State<ScheduleNo1Screen> {
 
 class CustomSubmitButton extends StatelessWidget {
   final String title;
+  final Widget? routeTo;
   CustomSubmitButton({
     required this.title,
+    this.routeTo,
   });
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 266.w,
-      height: 44.h,
-      padding: EdgeInsets.symmetric(horizontal: 15.w),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.r),
-        color: blueColor,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Icon(
-            Icons.arrow_forward,
-            color: Colors.transparent,
-            size: 25.sp,
-          ),
-          Text(
-            title,
-            style: GoogleFonts.roboto(
-              fontSize: 16.sp,
-              color: whiteColor,
+    return GestureDetector(
+      onTap: () {
+        routeTo == null
+            ? SizedBox()
+            : Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => routeTo!),
+              );
+      },
+      child: Container(
+        width: 266.w,
+        height: 44.h,
+        padding: EdgeInsets.symmetric(horizontal: 15.w),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.r),
+          color: blueColor,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Icon(
+              Icons.arrow_forward,
+              color: Colors.transparent,
+              size: 25.sp,
             ),
-          ),
-          Icon(
-            Icons.arrow_forward,
-            color: whiteColor,
-            size: 25.sp,
-          ),
-        ],
+            Text(
+              title,
+              style: GoogleFonts.roboto(
+                fontSize: 16.sp,
+                color: whiteColor,
+              ),
+            ),
+            Icon(
+              Icons.arrow_forward,
+              color: whiteColor,
+              size: 25.sp,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -347,24 +362,29 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            height: 20.h,
-            width: 25.h,
-            decoration: BoxDecoration(
-              color: whiteColor,
-              borderRadius: BorderRadius.circular(5.r),
-              boxShadow: [
-                BoxShadow(
-                  color: greyColor,
-                  spreadRadius: 0.1,
-                  blurRadius: 3,
-                  offset: Offset(0, 3),
-                )
-              ],
-            ),
-            child: Center(
-              child: Icon(
-                Icons.arrow_back,
+          GestureDetector(
+            onTap: () {
+              Get.back();
+            },
+            child: Container(
+              height: 20.h,
+              width: 25.h,
+              decoration: BoxDecoration(
+                color: whiteColor,
+                borderRadius: BorderRadius.circular(5.r),
+                boxShadow: [
+                  BoxShadow(
+                    color: greyColor,
+                    spreadRadius: 0.1,
+                    blurRadius: 3,
+                    offset: Offset(0, 3),
+                  )
+                ],
+              ),
+              child: Center(
+                child: Icon(
+                  Icons.arrow_back,
+                ),
               ),
             ),
           ),

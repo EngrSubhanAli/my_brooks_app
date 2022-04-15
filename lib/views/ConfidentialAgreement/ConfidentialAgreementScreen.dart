@@ -1,4 +1,5 @@
 import 'package:brooks/constants/Colors.dart';
+import 'package:brooks/views/NON-EXCLUSIVE%20FEE%20AGREEMENT/Non_ExclusiveScreen.dart';
 import 'package:brooks/views/ScheduleNo1Screen/ScheduleNo1Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -39,7 +40,10 @@ class ConfidentialAgreementScreen extends StatelessWidget {
                   hint: 'Customer Address',
                 ),
                 SizedBox(height: 20.h),
-                CustomSubmitButton(title: 'Submit'),
+                CustomSubmitButton(
+                  title: 'Submit',
+                  routeTo: NonExclusiveScreen(),
+                ),
                 SizedBox(height: 50.h),
               ],
             ),

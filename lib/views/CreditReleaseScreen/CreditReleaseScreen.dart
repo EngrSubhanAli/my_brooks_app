@@ -1,5 +1,6 @@
 import 'package:brooks/constants/Colors.dart';
 import 'package:brooks/views/ScheduleNo1Screen/ScheduleNo1Screen.dart';
+import 'package:brooks/views/TermsofAgreement/TermsofAgreementScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -72,7 +73,10 @@ class CreditReleaseScreen extends StatelessWidget {
                   titleColor: blackColor,
                 ),
                 SizedBox(height: 20.h),
-                CustomSubmitButton(title: 'SUBMIT'),
+                CustomSubmitButton(
+                  title: 'SUBMIT',
+                  routeTo: TermsofAgreementScreen(),
+                ),
                 SizedBox(height: 100.h),
               ],
             ),

@@ -1,3 +1,4 @@
+import 'package:brooks/views/FinancialStatement/4_FinancialStatementScreen.dart';
 import 'package:brooks/views/ScheduleNo1Screen/ScheduleNo1Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -100,7 +101,10 @@ class FinancialStatementScreen_3 extends StatelessWidget {
                   title: 'TOTAL EXPENDITURES',
                 ),
                 SizedBox(height: 20.h),
-                CustomSubmitButton(title: 'CONTINUE'),
+                CustomSubmitButton(
+                  title: 'CONTINUE',
+                  routeTo: FinancialStatementScreen_4(),
+                ),
                 SizedBox(height: 100.h),
               ],
             ),
