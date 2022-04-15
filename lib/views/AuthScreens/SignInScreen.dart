@@ -117,7 +117,7 @@ class SignInScreen extends StatelessWidget {
                   'assets/images/AuthScreenBottomImage.png',
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
